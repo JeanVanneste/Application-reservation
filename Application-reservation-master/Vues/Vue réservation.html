@@ -1,0 +1,49 @@
+<html>
+
+<head>
+	<title>Reservation</title>
+</head>
+
+<body>
+	<h1>
+		RESERVATION
+	</h1>
+
+	<p>
+		Le prix de la place est de 10 &euro; jusqu'à 12 ans et ensuite de 15 &euro;.
+	</p>
+	<p>
+		Le prix de l'assurance annulation est de 20 &euro; quel que soit le nombre de voyageurs.
+	</p>
+
+	
+	<form method="post">
+		<table>
+			<tr>
+				<th>Destination</th>
+				<th>
+					<select>
+						<option value=""></option>
+						<option value="Berlin">Berlin</option>
+						<option value="Bruxelles">Bruxelles</option>
+						<option value="Paris">Paris</option>
+					</select>
+				</th>
+			</tr>
+
+			<tr>
+				<th>Nombre de places</th>
+				<th><input type="text" name="nombre"></th>
+			</tr>
+			<tr>
+				<th>Assurance annulation</th>
+				<th><input type="checkbox" name="assurance"></th>	
+			</tr>
+		</table>
+		<button type="submit">Etape suivante</button>
+		<button type="reset">Annuler la réservation</button>
+
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+Modèles objet :
+
+Objet réservation :
+	Destination (string)
+	Passagers (liste Passager) 
+	Assurance annulation (bool)
+
+Objet passager : 
+	Nom (string)
+	Prénom (string)
+	Age (int)
+
