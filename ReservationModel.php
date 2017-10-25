@@ -39,6 +39,12 @@ class Reservation
 	function getTotalPrice()
 	{
 		// Add passengers price + insurance if taken
+		$price = 0
+		foreach($passengers as &passenger)
+		{
+			$price += passenger.getPassengerPrice();
+		}
+		if ($insurance){ $price += 20;}
 	}
 
 }
