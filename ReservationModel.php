@@ -1,33 +1,11 @@
 <?php 
 
-session_start();
-
 class Reservation
 {
-	public string $destination;
-	public int $seatTotal;
-	public bool $insurance;
-	public $passengers[];
-
-	public class Passenger
-	{
-		public string $firstName;
-		public string $lastName;
-		public int $age;
-
-		function __construct($firstName, $lastName, $age)
-		{
-			$this->firstName = $firstName;
-			$this->lastName = $lastName;
-			$this->age = $age;
-		}
-
-		function getPassengerPrice()
-		{
-			if ($this->age <= 12){return  10;}			
-			else{return 15;}
-		}
-	}
+	public $destination;
+	public $seatTotal;
+	public $insurance;
+	public $passengers;
 
 	function __construct($destination, $seatTotal, $insurance)
 	{
@@ -39,12 +17,11 @@ class Reservation
 	function getTotalPrice()
 	{
 		// Add passengers price + insurance if taken
-		$price = 0
-		foreach($passengers as &passenger)
-		{
-			$price += passenger.getPassengerPrice();
-		}
-		if ($insurance){ $price += 20;}
+	}
+
+	function addPassenger()
+	{
+
 	}
 
 }
