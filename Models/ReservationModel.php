@@ -6,6 +6,7 @@ class Reservation
 	public $seatTotal;
 	public $insurance;
 	public $passengers;
+	public $id = 1;
 
 	function __construct($destination, $seatTotal, $insurance)
 	{

@@ -2,19 +2,23 @@
 
 session_start();
 
-require "..\Vues\\passager.html";
 require "..\Models\PassengerModel.php";
 require "..\Models\ReservationModel.php";
+require "..\Vues\\passager.html";
 
-if (isset($_POST['destination']) && isset($_POST['nombre']))
+if (isset($_POST['destination']) && ($_POST['nombre']>=0))
 {
-	echo "1";
 	$reservation = new Reservation($_POST['destination'], $_POST['nombre'], isset($_POST['insurance']));
 }
 else 
 {
 	echo "Veuillez remplir les champs obligatoire !";
 }
+
+
+
+echo $reservation->id;
+
 /* Test
 
 echo $reservation->destination." ";
