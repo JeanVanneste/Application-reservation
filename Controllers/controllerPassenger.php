@@ -2,11 +2,11 @@
 
 session_start();
 
-require "Vues\\passager.html";
-require "PassengerModel.php";
-require "ReservationModel.php";
+require "..\Vues\\passager.html";
+require "..\Models\PassengerModel.php";
+require "..\Models\ReservationModel.php";
 
-if (isset($_POST['destination']) && isset($_POST['destination']))
+if (isset($_POST['destination']) && isset($_POST['nombre']))
 {
 	echo "1";
 	$reservation = new Reservation($_POST['destination'], $_POST['nombre'], isset($_POST['insurance']));
