@@ -1,9 +1,9 @@
 <?php
 
-session_start();
+//session_start();
 
-require "..\Vues\\reservation.html";
-include "..\Models\PassengerModel.php";
-include "..\Models\ReservationModel.php";
+require "Vues\\reservation.html";
+require "\Models\PassengerModel.php";
+require "\Models\ReservationModel.php";
 
 ?>

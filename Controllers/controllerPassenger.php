@@ -1,10 +1,10 @@
 <?php
 
-session_start();
+//session_start();
 
-require "..\Models\PassengerModel.php";
-require "..\Models\ReservationModel.php";
-require "..\Vues\\passager.html";
+require "Models\PassengerModel.php";
+require "Models\ReservationModel.php";
+require "Vues\\passager.html";
 
 if (isset($_POST['destination']) && ($_POST['nombre']>=0))
 {

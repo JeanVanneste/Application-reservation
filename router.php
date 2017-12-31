@@ -2,18 +2,31 @@
 
 session_start();
 
-//require "Vues\\home.html";
-
-
-
-if (isset($new))
+if (isset ($_POST['routeNext']))
 {
-	require "Controllers\controllerReservation.php";
+	$routeNext = $_POST['routeNext'];
+}
+
+
+if (isset($routeNext))
+{
+	switch ($routeNext)
+	{
+		case "newReservation" :
+			require "Controllers\controllerReservation.php";
+			break;
+		case "newPassenger":
+			require "Controllers\controllerPassenger.php";
+			break;
+		default :
+			require "error.html";
+	}
+
+	//require "Controllers\controllerReservation.php";
 }
 else
 {
 	require "Vues\home.php";
-	if (isset($new)){echo $new;}
 }
 
 ?>

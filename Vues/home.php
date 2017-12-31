@@ -6,7 +6,8 @@
 
 <body>
 	Bienvenue
-	<form action="..\router.php" method="post">
+	<form action="router.php" method="post">
+		<input type="hidden" name="routeNext" value="newReservation">
 		<button type="submit">Nouvelle réservation</button>
 	</form>
 </body>

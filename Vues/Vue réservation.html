@@ -17,13 +17,13 @@
 	</p>
 
 	
-	<form action="router.php" method="post">
+	<form method="post">
 		<table>
 			<tr>
-				<th>Destination*</th>
+				<th>Destination</th>
 				<th>
-					<select name="destination">
-						<option></option>
+					<select>
+						<option value=""></option>
 						<option value="Berlin">Berlin</option>
 						<option value="Bruxelles">Bruxelles</option>
 						<option value="Paris">Paris</option>
@@ -32,15 +32,14 @@
 			</tr>
 
 			<tr>
-				<th>Nombre de places*</th>
+				<th>Nombre de places</th>
 				<th><input type="text" name="nombre"></th>
 			</tr>
 			<tr>
 				<th>Assurance annulation</th>
-				<th><input type="checkbox" name="insurance"></th>
+				<th><input type="checkbox" name="assurance"></th>	
 			</tr>
 		</table>
-		<input type="hidden" name="routeNext" value="newPassenger">
 		<button type="submit">Etape suivante</button>
 		<button type="reset">Annuler la réservation</button>
 
